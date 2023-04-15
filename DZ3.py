@@ -5,19 +5,23 @@
 # 385916 -> yes
 # 123456 -> no
 
-n = int (input ("Веедите число: "))
+n = int (input ("Веедите шести значное число: "))
 sumA = 0
 sumB = 0
 a = n % 1000
 b = n // 1000
-while a > 0:
-    tempA = a % 10
-    tempB = b % 10
-    sumA = sumA + tempA
-    sumB = sumB + tempB
-    a = a // 10
-    b = b // 10
-if sumA == sumB:
-    print("Поздравляю! Счастливый билет!")
+print(n)
+if n > 99999 and n < 999999:
+    while a > 0:
+        tempA = a % 10
+        tempB = b % 10
+        sumA = sumA + tempA
+        sumB = sumB + tempB
+        a = a // 10
+        b = b // 10
+    if sumA == sumB:
+        print("Поздравляю! Счастливый билет!")
+    else:
+        print("Вам повезет в другой раз!")
 else:
-    print("Вам повезет в другой раз!")
+    print("Требуется шести значное число!")
